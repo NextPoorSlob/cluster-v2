@@ -28,7 +28,6 @@ app.get('/secured', keycloak.protect('realm:myrole'), function (req, res) {
 app.get('/public', function (req, res) {
   res.setHeader('content-type', 'text/plain');
   res.send('Keycloak config: ' + JSON.stringify(keycloak.getConfig(), null, 2));
-  console.log(keycloak.protect());
 });
 
 app.get('/', function (req, res) {

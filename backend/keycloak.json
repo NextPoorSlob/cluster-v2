@@ -1,6 +1,8 @@
 {
   "realm": "myrealm",
   "bearer-only": true,
-  "auth-server-url": "${env.KC_URL:http://localhost:8080/auth}",
-  "resource": "service-nodejs"
+  "auth-server-url": "${env.REACT_APP_KC_URL:http://localhost:8080/auth}",
+  "resource": "myclient",
+  "public-client": true,
+  "confidential-port": 0
 }
